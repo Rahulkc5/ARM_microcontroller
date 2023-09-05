@@ -1,0 +1,19 @@
+AREA ANS3, CODE, READONLY
+	       THUMB
+		   ENTRY
+		   EXPORT __main
+__main
+           LDR R0,=0X20000000
+		   LDR R1,=0X20000008
+		   LDR R7,=0X20004008
+		   LDR R8,=0X2000400C
+		   LDR R9,=0X20004000
+		   LDR R2,[R0]
+		   LDR R3,[R1]
+		   AND R4, R2, R3
+		   ORR R5, R2, R3
+		   EOR R6, R2, R3
+		   STR R4,[R7]
+		   STR R5,[R8]
+		   STR R6,[R9]
+		   END
